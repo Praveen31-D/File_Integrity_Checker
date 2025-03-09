@@ -1,0 +1,149 @@
+Project Title: File Change Monitoring Tool with Hash Comparison**
+
+#### Project Overview
+
+Develop a user-friendly tool that monitors files for changes by calculating and comparing hash values. The tool should be able to track modifications, additions, or deletions in specified files or directories in real-time or at scheduled intervals. Users should be able to visualize changes clearly and interact with the tool in a straightforward manner.
+
+#### Functional Requirements
+
+1. **File Selection:**
+   - Allow users to select files or directories they wish to monitor.
+   - Provide options for recursive scanning of directories.
+
+2. **Hash Calculation:**
+   - Use reliable hashing algorithms (e.g., SHA-256, MD5) to compute hash values.
+   - Recalculate hash values automatically or on user command.
+  
+3. **Change Detection:**
+   - Compare the current hash of the selected files against previously stored hashes.
+   - Detect changes, such as:
+     - Modifications to file content
+     - Additions of new files
+     - Deletions of existing files
+
+4. **Monitoring Intervals:**
+   - Allow users to set monitoring intervals (e.g., every minute, hourly, or custom).
+   - Implement a manual option to trigger a hash recalculation.
+
+5. **Change Logging:**
+   - Create a log of detected changes, including timestamps and file paths.
+   - Save logs in a user-friendly format (e.g., text file or CSV) for easy access.
+
+6. **User Interface:**
+   - Develop an interactive Graphical User Interface (GUI):
+     - Use clear buttons for actions like "Start Monitoring", "Stop Monitoring", and "Export Logs".
+     - Display the list of monitored files with their current hash values in a table format.
+     - Highlight changes in real-time with color-coded responses (e.g., red for deleted files, green for newly added files, and yellow for modified files).
+     - Implement a notification system (like pop-ups or badges) for immediate alerts on detected changes.
+  
+7. **Settings and Customization:**
+   - Let users customize settings such as:
+     - Choosing hash algorithms
+     - Setting notification preferences (e.g., visual alerts, sound notifications)
+     - Configuring export options for logs (e.g., format, directory)
+
+8. **Help and Documentation:**
+   - Provide an interactive guide or tutorial to walk new users through the functionality of the tool.
+   - Include a FAQ section for troubleshooting common issues.
+
+#### Technical Requirements
+
+- **Programming Language:** Python or JavaScript (Node.js for backend)
+- **GUI Framework:** Tkinter (for Python) or Electron (for JavaScript)
+- **Hashing Libraries:** `hashlib` for Python or built-in crypto modules in Node.js
+- **Version Control:** Git for tracking changes in the tool itself.
+- **Testing:** Use unit tests to ensure the functionality of hash calculations and change detection.
+
+#### Deliverables
+
+1. Fully functional File Change Monitoring Tool.
+2. User-friendly interface with documentation.
+3. Source code repository logged with commits.
+4. User manual/tutorial on how to use the tool.
+
+#### Optional Features
+
+- Integrate email or messaging notifications for change alerts.
+- Implement a feature for rolling back files to previous versions if a file is modified.
+
+This detailed prompt will guide you in building an effective and engaging tool for monitoring file changes, ensuring that the users are supported with a clear interface and functionalities tailored to their needs.
+
+
+
+
+Main Dashboard**
+
+**Description:**
+- A clean layout with a header displaying the tool's name.
+- A left panel for navigation, including sections like "Monitor Files", "Change Log", "Settings", and "Help".
+- The main area shows a list of monitored files with the following columns:
+  - **File Path:** Shows the path of the monitored file.
+  - **Current Hash:** Displays the current hash value of the file.
+  - **Status:** Indicates whether the file is "Unchanged", "Modified", "Added", or "Deleted" (highlighted with color coding).
+  - **Last Checked:** The timestamp of the last hash calculation.
+
+**Visual Elements:**
+- Buttons like "Add File", "Remove File", and "Start Monitoring" styled prominently.
+- Color-coded status cells: green for added, red for deleted, yellow for modified, and grey for unchanged.
+
+---
+
+### 2. **Monitor Files Section**
+
+**Description:**
+- A dedicated screen for adding or removing files.
+- An "Add File" button that opens a file browser for users to select files or directories.
+- A "Remove Selected" button to deselect files to be monitored.
+
+**Visual Elements:**
+- A list view or grid with checkboxes next to each listed file for easy selection.
+- A progress bar that appears during file selection or hash calculations.
+
+---
+
+### 3. **Change Log Section**
+
+**Description:**
+- A tabular representation of changes detected over time.
+- Columns show:
+  - **Timestamp:** When the change was detected.
+  - **File:** Name of the file that has changed.
+  - **Action:** What happened (added, modified, deleted).
+  - **Old Hash:** The hash value before the change, if applicable.
+  - **New Hash:** The hash value after the change.
+
+**Visual Elements:**
+- Search/filter options at the top to find specific entries.
+- A "Save Log" button that allows users to export the logs in .txt or .csv format.
+
+---
+
+### 4. **Settings Section**
+
+**Description:**
+- Settings panels allowing users to customize the tool.
+- Options to choose hash algorithms (with brief descriptions of each).
+- Field to enter monitoring intervals (e.g., dropdown or slider).
+- Checkboxes for notification preferences (e.g., "Enable Sound Notifications").
+
+**Visual Elements:**
+- Tabs for different settings categories (General, Notifications, Logging).
+- A "Save Settings" button at the bottom to apply changes.
+
+---
+
+### 5. **Help Section**
+
+**Description:**
+- An interactive guide explaining each feature of the tool.
+- Step-by-step instructions displayed.
+- FAQ section for common questions users might have.
+
+**Visual Elements:**
+- Search bar for quick access to help topics.
+- Tooltips that appear when the user hovers over buttons.
+
+---
+
+### Additional Notes:
+You could use a graphics tool like Figma, Adobe XD, or Sketch to create wireframes based on these descriptions, which can help in visualizing the interface more clearly. If you need actual interface designs, consider collaborating with a UI/UX designer who can bring these concepts to life visually.
